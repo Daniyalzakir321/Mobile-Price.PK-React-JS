@@ -3,22 +3,18 @@ import { Link } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 import WD from './mobile-images/wd.PNG'
-import Skeleton from '@material-ui/lab/Skeleton';
+// import Skeleton from '@material-ui/lab/Skeleton';
+import Typist from 'react-typist';
+import Slide from 'react-reveal/Slide';
 
 export default function About() {
   return (
     <div>
-
       <Header />
-
-
       {/* Style */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
-
-
-
                     @media only screen and (max-width: 850px) {
                         h1 {
                             font-size: 29px !important;
@@ -76,45 +72,60 @@ export default function About() {
 
 
       <div>
-        
+
         <br />
         <br />
         <h1 style={{ textAlign: 'center', fontFamily: '"Ubuntu"' }}>About Us</h1>
         <br />
         <div className="container ">
           <div className="row col-md-12 col-sm-12">
-            <div id="divimg" className=" col-sm-12 col-md-4 align-content-center" style={{ textAlign: 'center' }}> <br />
-              <img className="img-responsive rounded-circle " src={WD} alt="Loading..." style={{ borderRadius: '150px', border: '4px solid rgb(162, 161, 236)' }} />
-            </div>
+            <Slide left cascade duration={500}>
+              <div id="divimg" className=" col-sm-12 col-md-4 align-content-center" style={{ textAlign: 'center' }}> <br />
+                <img className="img-responsive rounded-circle " src={WD} alt="Loading..." style={{ borderRadius: '150px', border: '4px solid rgb(162, 161, 236)' }} />
+              </div>
+            </Slide>
             <div className=" col-sm-12 col-md-7">
               <br />
-              <h3 style={{ textAlign: 'left', fontFamily: '"Ubuntu"', fontSize: '26px' }}>Who we are?</h3>
-              <div id="divp" style={{ backgroundColor: 'rgb(253, 253, 253)', fontSize: '18px', fontFamily: 'sans-serif', textAlign: 'justify', padding: '10px 20px' }}>
-                <p>
-                  With each passing year technology keeps on advancing tremendously and Advance Telecom strives to
-                  keep
-                  its customers up to date with the latest gadgets and devices. Founded in 2006, we have been working
-                  hard
-                  to serve our customers and providing them with the best after sales services.
-            <br /><br />
-            We at Advance Telecom are proud of the strong reputation which we have earned over the past years.
-            For
-            us it is always about providing our customers with the best of the best only, and with the years of
-            hands-on experience we are well equipped to cater our customers better than ever.
-            <br /><br />
-            Our distribution network is the largest in the country and we are continuously working to expand it
-            even
-            further.
-            <br /><br />
-            Every day, we connect with hundreds of people looking for assistance regarding new phones, updates
-            etc.
-            We also provide various service centers located at different places for easy access. Our excellent
-            customer care is what has made our customers loyal to us and we promise to deliver everything the
-            future
-            has to offer.
-            <br />
-                </p>
-              </div>
+              <Typist
+                avgTypingSpeed={15000}
+                startDelay={1600}
+                cursor={{
+                  show: false,
+                  blink: false,
+                }}
+              >
+                <h3 style={{ textAlign: 'left', fontFamily: '"Ubuntu"', fontSize: '26px' }}>
+                  Who we are?
+                </h3>
+              </Typist>
+              <Slide right cascade duration={1500}>
+                <div id="divp" style={{ backgroundColor: 'rgb(253, 253, 253)', fontSize: '18px', fontFamily: 'sans-serif', textAlign: 'justify', padding: '10px 20px' }}>
+                  <p>
+                    With each passing year technology keeps on advancing tremendously and Advance Telecom strives to
+                    keep
+                    its customers up to date with the latest gadgets and devices. Founded in 2006, we have been working
+                    hard
+                    to serve our customers and providing them with the best after sales services.
+                    <br /><br />
+                    We at Advance Telecom are proud of the strong reputation which we have earned over the past years.
+                    For
+                    us it is always about providing our customers with the best of the best only, and with the years of
+                    hands-on experience we are well equipped to cater our customers better than ever.
+                    <br /><br />
+                    Our distribution network is the largest in the country and we are continuously working to expand it
+                    even
+                    further.
+                    <br /><br />
+                    Every day, we connect with hundreds of people looking for assistance regarding new phones, updates
+                    etc.
+                    We also provide various service centers located at different places for easy access. Our excellent
+                    customer care is what has made our customers loyal to us and we promise to deliver everything the
+                    future
+                    has to offer.
+                    <br />
+                  </p>
+                </div>
+              </Slide>
             </div>
           </div>
         </div>

@@ -2,18 +2,19 @@ import React from 'react'
 import logo from './social-icons/logo.svg'
 import { HashLink as Link } from 'react-router-hash-link';
 import { NavLink } from 'react-router-dom';
-
+import Spin from 'react-reveal/Spin';
 
 
 export default function Header() {
     return (
         <div>
-
-
             {/* Navbar */}
             <div id="maindivnav">
                 <nav className="navbar container navbar-expand-lg navbar-dark">
-                    <Link to="/" className="navbar-brand" id="linkimage">  <img id="image" src={logo} alt="Loading..." width="60px" height="50px" />
+                    <Link to="/" className="navbar-brand" id="linkimage">
+                         <Spin  duration={2200}>
+                             <img id="image" src={logo} alt="Loading..." width="60px" height="50px" />
+                        </Spin>
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />

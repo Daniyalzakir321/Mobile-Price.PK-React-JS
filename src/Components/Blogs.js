@@ -2,16 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
-
+import Slide from 'react-reveal/Slide';
 
 export default function Blogs() {
 
     return (
         <div>
-
-
             <Header />
-
             <style
                 dangerouslySetInnerHTML={{
                     __html: `
@@ -93,8 +90,6 @@ export default function Blogs() {
             #body-blogs {
                 /* overflow-x: hidden; */
             }
-           
-           
             
             ` }} />
 
@@ -106,38 +101,41 @@ export default function Blogs() {
                 <h1 style={{ textAlign: 'center', fontFamily: '"Ubuntu"' }}>Latest Blogs</h1>
                 <br />
                 <div className="container-fluid row" id="firstiframe">
-                    <div id="divimg " className="col  col-sm-12 col-md-12 " style={{ textAlign: 'center' }}>
-                        <iframe width={800} height={450} src="https://www.youtube.com/embed/zrc2UAMnr94?start=81" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-                        <div className="blog1">
-                            <h4 style={{ fontFamily: '"Ubuntu"', fontSize: '18px', textAlign: 'justify' }}>
-                                Huawei Mate XS Foldable Launched This
-          Year And Will Be Available Here On Saturday.</h4>
-                            <details style={{ textAlign: 'left' }}>
-                                <summary className="btn btn-outline-secondary btn-sm" style={{ fontSize: '11px', fontFamily: '"Ubuntu"' }}>
-                                    See More</summary>
-                                <p id="p">
-                                    The Huawei Mate XS foldable smartphone, launched last year, did not make it outside China.
-                                    However,
-                                    its successor, the Mate Xs, will be available here on Saturday.
-                                    As its moniker implies, the Mate Xs is an incremental upgrade from its predecessor.For one, with
-                                    its
-                                    new Huawei Kirin 990 5G chipset, the Mate Xs is said to have faster overall
-                                    performance (up by 23 per cent from the Mate X), better graphics performance (up 39 per cent)
-                                    and
-                                    improved power efficiency (up 23 per cent), as well as support more 5G bands.
-                                    DESIGN &amp; DISPLAY
-                                    Design wise, the Mate Xs is relatively unchanged from the original. Still drool-worthy with its
-                                    foldable Oled display.Its hinge design is said to be improved with the use of more than 100
-                                    high-precision components.
-          </p>
-                            </details>
+                    <Slide bottom cascade duration={1500}>
+                        <div id="divimg " className="col  col-sm-12 col-md-12 " style={{ textAlign: 'center' }}>
+                            <iframe width={800} height={450} src="https://www.youtube.com/embed/zrc2UAMnr94?start=81" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                            <div className="blog1">
+                                <h4 style={{ fontFamily: '"Ubuntu"', fontSize: '18px', textAlign: 'justify' }}>
+                                    Huawei Mate XS Foldable Launched This
+                                    Year And Will Be Available Here On Saturday.</h4>
+                                <details style={{ textAlign: 'left' }}>
+                                    <summary className="btn btn-outline-secondary btn-sm" style={{ fontSize: '11px', fontFamily: '"Ubuntu"' }}>
+                                        See More</summary>
+                                    <p id="p">
+                                        The Huawei Mate XS foldable smartphone, launched last year, did not make it outside China.
+                                        However,
+                                        its successor, the Mate Xs, will be available here on Saturday.
+                                        As its moniker implies, the Mate Xs is an incremental upgrade from its predecessor.For one, with
+                                        its
+                                        new Huawei Kirin 990 5G chipset, the Mate Xs is said to have faster overall
+                                        performance (up by 23 per cent from the Mate X), better graphics performance (up 39 per cent)
+                                        and
+                                        improved power efficiency (up 23 per cent), as well as support more 5G bands.
+                                        DESIGN &amp; DISPLAY
+                                        Design wise, the Mate Xs is relatively unchanged from the original. Still drool-worthy with its
+                                        foldable Oled display.Its hinge design is said to be improved with the use of more than 100
+                                        high-precision components.
+                                    </p>
+                                </details>
+                            </div>
                         </div>
-                    </div>
+                    </Slide>
                     <br />
                 </div>
                 <br />
                 <br />
                 <div className="container" style={{ textAlign: 'center', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+                    {/* <Slide bottom cascade duration={1500}> */}
                     <div className="row" style={{ textAlign: 'center', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
                         <div className="col col-sm-12 col-md-4 " id="container2" style={{ textAlign: 'center' }}>
                             <iframe className="embed-responsive-item " width={350} height={195} src="https://www.youtube.com/embed/q3eFXeO62oo" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
@@ -154,7 +152,7 @@ export default function Blogs() {
                                         What’s perhaps most frustrating are the glimpses you get using the device, those moments it
                                         transcends lovely and is legitimately useful. And when you leave the device at home, you
                                         actually start to miss the 7.3-inch display.
-            </p>
+                                    </p>
                                 </details>
                             </div>
                             <br />
@@ -174,7 +172,7 @@ export default function Blogs() {
                                         Snapdragon 855 Plus processor — and a giant 6,000mAh battery to power it all.
                                         The design on this smartphone remains largely the same, as this hands-on video from engadget
                                         and unboxing shows.
-            </p>
+                                    </p>
                                 </details>
                             </div>
                             <br />
@@ -194,13 +192,14 @@ export default function Blogs() {
                                         of its 10-series phones – the TCL 10L, 10 Pro and 10 5G. Immerse yourself with an FHD + curved display and more. The trio are fairly similar,
                                         pulling from the same bag of specs,
                                         but amusingly enough the 5G model isn’t the top model. Let us walk you through the new trio.
-            </p>
+                                    </p>
                                 </details>
                             </div>
                             <br />
                             {/*  */}
                         </div>
                     </div>
+                    {/* </Slide> */}
                 </div>
                 <br /><br />
             </div>

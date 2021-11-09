@@ -44,8 +44,8 @@ padding-left: 25px !important;
 .nav-link:hover{
   color: rgb(0, 0, 0) !important;
   background-color: #ffffff !important; 
-  transition: 0.4s ease;
-transition-delay: 0.4s ease;
+  transition: all 0.8s ease;
+/* transition-delay: 0.4s ease; */
 
 } 
 #white>a{
@@ -388,8 +388,8 @@ border: 1px solid gray;
 box-shadow: 1px 1px 7px gray;
 cursor: pointer;
 background-color: rgb(245, 245, 245);
-transition: 0.5s ease;
-transition-delay: 0.5s ease;
+transition: all 0.5s ease;
+/* transition-delay: 0.5s ease; */
 transform: scale(1.1, 1.09) ;
 }
 
@@ -646,9 +646,25 @@ background-color:#212121 !important;
 
       }
 
+
+      
+
   
     
+  .sstt{
+  /* background-color:#432421 ;       */
+  /* scroll-snap-type: y mandatory;  */
+  /* overflow-y: auto; */
+  }
 
+  .sst{
+    /* width: 100vw; */
+    /* height: 100vh; */
+   
+
+  /* background-color:#212121 ;    */
+  /* scroll-snap-align: start;            */
+  }
 
 
 
