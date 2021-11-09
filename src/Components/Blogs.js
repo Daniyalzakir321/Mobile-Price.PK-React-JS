@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 import Slide from 'react-reveal/Slide';
+import Skeleton from 'react-loading-skeleton'
 
 export default function Blogs() {
+    const [loader, setloader] = useState(true)
+    setTimeout(() => {
+        setloader(false)
+    }, 1500);
 
     return (
         <div>
@@ -101,9 +106,14 @@ export default function Blogs() {
                 <h1 style={{ textAlign: 'center', fontFamily: '"Ubuntu"' }}>Latest Blogs</h1>
                 <br />
                 <div className="container-fluid row" id="firstiframe">
-                    <Slide bottom cascade duration={1500}>
+                    <Slide bottom duration={1000}>
                         <div id="divimg " className="col  col-sm-12 col-md-12 " style={{ textAlign: 'center' }}>
-                            <iframe width={800} height={450} src="https://www.youtube.com/embed/zrc2UAMnr94?start=81" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                            {loader ?
+
+                                <Skeleton count={1} width={800} height={450} />
+                                :
+                                <iframe width={800} height={450} src="https://www.youtube.com/embed/zrc2UAMnr94?start=81" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                            }
                             <div className="blog1">
                                 <h4 style={{ fontFamily: '"Ubuntu"', fontSize: '18px', textAlign: 'justify' }}>
                                     Huawei Mate XS Foldable Launched This
@@ -138,8 +148,10 @@ export default function Blogs() {
                     {/* <Slide bottom cascade duration={1500}> */}
                     <div className="row" style={{ textAlign: 'center', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
                         <div className="col col-sm-12 col-md-4 " id="container2" style={{ textAlign: 'center' }}>
-                            <iframe className="embed-responsive-item " width={350} height={195} src="https://www.youtube.com/embed/q3eFXeO62oo" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-                            {/* blog2 */}
+                            {loader ?
+                                <Skeleton width={350} height={195} />
+                                : <iframe className="embed-responsive-item " width={350} height={195} src="https://www.youtube.com/embed/q3eFXeO62oo" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                            } {/* blog2 */}
                             <div className="blog2">
                                 <h4 style={{ fontFamily: '"Ubuntu"', fontSize: '18px', textAlign: 'justify' }}>
                                     Samsung Galaxy Fold 2 Launched.</h4>
@@ -159,7 +171,11 @@ export default function Blogs() {
                             {/*  */}
                         </div>
                         <div className="col col-sm-12 col-md-4" id="container2">
-                            <iframe className="embed-responsive-item " width={350} height={195} src="https://www.youtube.com/embed/SFEYFHUOEWI" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                            {loader ?
+                                <Skeleton width={350} height={195} />
+                                :
+                                <iframe className="embed-responsive-item " width={350} height={195} src="https://www.youtube.com/embed/SFEYFHUOEWI" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                            }
                             {/* blog3 */}
                             <div className="blog2">
                                 <h4 style={{ fontFamily: '"Ubuntu"', fontSize: '18px', textAlign: 'justify' }}>
@@ -179,8 +195,11 @@ export default function Blogs() {
                             {/*  */}
                         </div>
                         <div className="col col-sm-12 col-md-4" id="container2">
-                            <iframe className="embed-responsive-item " width={350} height={195} src="https://www.youtube.com/embed/98HWUMBDgWM?start=18" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-                            {/* blog4 */}
+                            {loader ?
+                                <Skeleton width={350} height={195} />
+                                :
+                                <iframe className="embed-responsive-item " width={350} height={195} src="https://www.youtube.com/embed/98HWUMBDgWM?start=18" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                            }{/* blog4 */}
                             <div className="blog2">
                                 <h4 style={{ fontFamily: '"Ubuntu"', fontSize: '18px', textAlign: 'justify' }}>
                                     TCL 10 Pro 512 Giga Byte Launched.</h4>
